@@ -1,3 +1,4 @@
+package shcool.aston;
 
 import java.util.Arrays;
 public class Les_3 {
