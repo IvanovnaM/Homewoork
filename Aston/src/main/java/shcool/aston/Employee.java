@@ -32,6 +32,7 @@ public class Employee {
                 + age);
     }
 
+
     public void printEmployeeInfo() {
         System.out.println("ФИО : " + name);
         System.out.println("Должность : " + position);
@@ -41,6 +42,7 @@ public class Employee {
         System.out.println("Возраст : " + age);
         System.out.println();
     }
+
 
 
 }

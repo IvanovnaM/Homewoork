@@ -9,6 +9,9 @@ public class Park {
     private Attraction attr4;
     private Attraction attr5;
 
+    public Park() {
+    }
+
 
     public class Attraction {
         private String attrName;
