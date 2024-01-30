@@ -1,10 +1,14 @@
 package shcool.aston.lesson_6;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 public class AppData {
     private final String[] header;
     private final int[][] data;
+
 
 
     public AppData(String[] header, int[][] data) {
@@ -34,23 +38,16 @@ public class AppData {
         return this.data;
     }
 
-    /**
-     * Переводим данные из объекта класса к виду, в котором они будут
-     * корректно занесены в CSV файл
-     */
     public String[][] toCSVTable() {
-        // Все данные объекта класса сохраняем в один массив
+
         String[][] table = new String[this.data.length + 1][this.header.length];
         for (int row = 0; row < table.length; row++) {
             for (int column = 0; column < table[0].length; column++) {
-                /*
-                Если последняя ячейка строки, ставим ";" и переходим на
-                следующую строку, иначе просто ставим ";"
-                 */
+
                 String semicolon = column == table[0].length - 1 ? ";\n" : ";";
-                if (row == 0) { // Сначала записываем заголовки
+                if (row == 0) {
                     table[row][column] = this.header[column] + semicolon;
-                } else { // После заголовков, записываем данные
+                } else {
                     table[row][column] = this.data[row - 1][column] + semicolon;
                 }
             }

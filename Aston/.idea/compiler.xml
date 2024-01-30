@@ -9,8 +9,5 @@
         <module name="Aston" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Aston" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
