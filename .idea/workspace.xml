@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34d76c8e-8cb8-4c59-8f72-25c25b521f70" name="Changes" comment="6 commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Les_2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Aston/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Aston/src/main/java/shcool/aston/Les_3.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="autoscrollToSource" value="true" />
+  </component>
+  <component name="ProjectId" id="2bPFV8cVwI4w3zLJmOzA36UE30n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.shcool.aston.Les_3">
+    <configuration name="Employee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shcool.aston.Employee" />
+      <module name="Aston" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shcool.aston.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Les_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Les_2" />
+      <module name="Aston" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Les_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shcool.aston.Les_3" />
+      <module name="Aston" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shcool.aston.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Park" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shcool.aston.Park" />
+      <module name="Aston" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="shcool.aston.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shcool.aston.Les_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="shcool.aston.Les_3" />
+      <module name="Aston" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.shcool.aston.Les_3" />
+        <item itemvalue="Application.Park" />
+        <item itemvalue="Application.Les_3" />
+        <item itemvalue="Application.Les_2" />
+        <item itemvalue="Application.Employee" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34d76c8e-8cb8-4c59-8f72-25c25b521f70" name="Changes" comment="" />
+      <created>1706108828128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706108828128</updated>
+      <workItem from="1706108829870" duration="2194000" />
+      <workItem from="1706165322931" duration="3662000" />
+      <workItem from="1706169538278" duration="3687000" />
+      <workItem from="1706176094705" duration="15467000" />
+      <workItem from="1706197645865" duration="11247000" />
+      <workItem from="1706250866190" duration="24997000" />
+      <workItem from="1706348931210" duration="13850000" />
+      <workItem from="1706370673867" duration="8775000" />
+      <workItem from="1706524341593" duration="1159000" />
+      <workItem from="1706609638573" duration="4621000" />
+      <workItem from="1706688343232" duration="1764000" />
+      <workItem from="1706690135922" duration="3263000" />
+      <workItem from="1706693680882" duration="459000" />
+    </task>
+    <task id="LOCAL-00001" summary="4 commit">
+      <created>1706174191700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706174191700</updated>
+    </task>
+    <task id="LOCAL-00002" summary="4 commit">
+      <created>1706174545528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706174545528</updated>
+    </task>
+    <task id="LOCAL-00003" summary="4 commit">
+      <created>1706176548792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706176548792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="4 commit">
+      <created>1706176687678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706176687678</updated>
+    </task>
+    <task id="LOCAL-00005" summary="4 commit">
+      <created>1706176957464</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706176957464</updated>
+    </task>
+    <task id="LOCAL-00006" summary="4 commit">
+      <created>1706208807683</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706208807683</updated>
+    </task>
+    <task id="LOCAL-00007" summary="4 commit">
+      <created>1706208887694</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706208887694</updated>
+    </task>
+    <task id="LOCAL-00008" summary="4 commit">
+      <created>1706208942098</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706208942098</updated>
+    </task>
+    <task id="LOCAL-00009" summary="4 commit">
+      <created>1706250931296</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706250931296</updated>
+    </task>
+    <task id="LOCAL-00010" summary="5 commit">
+      <created>1706251334805</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706251334805</updated>
+    </task>
+    <task id="LOCAL-00011" summary="5 commit">
+      <created>1706384969754</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706384969754</updated>
+    </task>
+    <task id="LOCAL-00012" summary="6 commit">
+      <created>1706612804979</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706612804979</updated>
+    </task>
+    <task id="LOCAL-00013" summary="6 commit">
+      <created>1706612892390</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706612892390</updated>
+    </task>
+    <task id="LOCAL-00014" summary="6 commit">
+      <created>1706613029102</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706613029102</updated>
+    </task>
+    <task id="LOCAL-00015" summary="6 commit">
+      <created>1706689881593</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706689881593</updated>
+    </task>
+    <task id="LOCAL-00016" summary="6 commit">
+      <created>1706690231371</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1706690231371</updated>
+    </task>
+    <task id="LOCAL-00017" summary="6 commit">
+      <created>1706690341996</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1706690341996</updated>
+    </task>
+    <task id="LOCAL-00018" summary="6 commit">
+      <created>1706691309740</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1706691309740</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="4 commit" />
+    <MESSAGE value="5 commit" />
+    <MESSAGE value="6 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
