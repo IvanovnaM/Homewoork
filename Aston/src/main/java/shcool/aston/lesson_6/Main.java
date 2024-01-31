@@ -1,5 +1,5 @@
 package shcool.aston.lesson_6;
-import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         String path1 = "file1.csv";

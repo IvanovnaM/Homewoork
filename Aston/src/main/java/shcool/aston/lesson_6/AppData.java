@@ -5,10 +5,10 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
+
 public class AppData {
     private final String[] header;
     private final int[][] data;
-
 
 
     public AppData(String[] header, int[][] data) {
