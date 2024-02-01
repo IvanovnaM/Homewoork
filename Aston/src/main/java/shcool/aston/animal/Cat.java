@@ -1,10 +1,12 @@
-package shcool.aston;
+package shcool.aston.animal;
 
 public class Cat extends Animal {
     private static int count;
 
     public int appetite;
     public boolean fullness;
+
+
 
     public Cat(String name, int swim, int run, int appetite, boolean fullness) {
         this.name = name;
@@ -21,14 +23,28 @@ public class Cat extends Animal {
         return count;
     }
 
+
+
     public void eat(Plate p) {
         p.decreaseFood(appetite);
     }
 
+
     @Override
-    public void toSwim(int swim) {
+    public void toSwim() {
         System.out.println(name + " не любит плавать.");
     }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void torun() {
+
+    }
+
 }
 
 

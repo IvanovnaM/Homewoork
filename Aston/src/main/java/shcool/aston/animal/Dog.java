@@ -1,7 +1,8 @@
-package shcool.aston;
+package shcool.aston.animal;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
     private static int count;
+
     public Dog(String name, int swim, int run) {
 
         this.name = name;
@@ -11,8 +12,19 @@ public class Dog extends Animal{
         this.maxSwim = 10;
         count++;
     }
+
     public static int getCount() {
         return count;
+    }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void torun() {
+
     }
 
 

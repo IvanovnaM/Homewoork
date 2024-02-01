@@ -1,22 +1,30 @@
-package shcool.aston;
+package shcool.aston.animal;
 
 abstract class Animal {
-    protected String name;
-    protected int run;
-    protected int swim;
-    protected int maxRun;
-    protected int maxSwim;
-    private static int count;
+    public String name;
+    public int run;
+    public int swim;
+    public int maxRun;
+    public int maxSwim;
+    public static int count;
 
     public Animal() {
         count++;
+    }
+
+    public String toString() {
+        return "[ name=" + name
+                + ", run=" + run
+                + ", maxRun=" + maxRun
+                + ", maxSwim=" + maxSwim
+                + ", swim=" + swim + "]";
     }
 
     public static int getCount() {
         return count;
     }
 
-    protected void toRun(int run) {
+    public void toRun() {
         if (run <= maxRun && run > 0) {
             System.out.println(name + " пробежал/а " + run + " м.");
         } else {
@@ -24,7 +32,7 @@ abstract class Animal {
         }
     }
 
-    protected void toSwim(int swim) {
+    public void toSwim() {
 
         if (swim <= maxSwim && swim > 0) {
             System.out.println(name + " проплывает " + swim + " м.");
@@ -32,13 +40,19 @@ abstract class Animal {
             System.out.println(name + " не может проплыть " + swim + " м.");
         }
     }
-    protected void test(){
-        toRun(run);
-        toSwim(swim);
-        System.out.println("===========================");
+
+
+    public void eat(Plate plate) {
     }
 
 
+    public abstract void run();
+
+    public abstract void torun();
+
+
+    public void info() {
+    }
 }
 /*Задание 1:
 

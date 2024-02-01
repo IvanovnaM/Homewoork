@@ -1,11 +1,13 @@
-package shcool.aston;
+package shcool.aston.animal;
+
+
 
 import java.util.Scanner;
 
 public class CatMetod {
     public static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         int action;
 
         Cat[] allCats = new Cat[4];
@@ -33,4 +35,11 @@ public class CatMetod {
         plate.info();
 
     }
-}
+
+
+    }
+
+
+
+
+

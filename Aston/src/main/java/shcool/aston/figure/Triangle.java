@@ -1,13 +1,15 @@
-package shcool.aston;
+package shcool.aston.figure;
 
-public class Triangle implements Figure {
-    private static final String NAME = "Triangle";
+import shcool.aston.figure.Figure;
+
+public class Triangle extends Figure {
 
     private final double sideA;
     private final double sideB;
     private final double sideC;
 
-    public Triangle(double sideA, double sideB, double sideC) {
+    public Triangle(String name, String fillColor, String borderColor, double sideA, double sideB, double sideC) {
+        super(name,fillColor,borderColor);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
@@ -24,19 +26,6 @@ public class Triangle implements Figure {
         return sideA + sideB + sideC;
     }
 
-    @Override
-    public String getNamme() {
-        return NAME;
-    }
 
-    @Override
-    public String getFillColor() {
-        return "green";
-    }
-
-    @Override
-    public String getBorderColor() {
-        return "black";
-    }
 
 }
