@@ -1,74 +1,74 @@
 package shcool.aston.lesson_6;
 
-import java.io.BufferedReader;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Arrays;
+import java.io.*;
 
-public class AppData {
-    private final String[] header;
-    private final int[][] data;
+public class AppData  {
 
+    String[] header;
+    int[][] data;
 
     public AppData(String[] header, int[][] data) {
         this.header = header;
         this.data = data;
     }
 
-    public void save(String path) {
-        try {
-            FileOutputStream file = new FileOutputStream(path);
-            for (int row = 0; row < this.getData().length + 1; row++) {
-                for (int column = 0; column < this.getHeader().length; column++) {
-                    String[][] table = this.toCSVTable();
-                    file.write(table[row][column].getBytes());
-                }
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public void save(String fileName) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
 
-    public String[] getHeader() {
-        return this.header;
-    }
-
-    public int[][] getData() {
-        return this.data;
-    }
-
-    public String[][] toCSVTable() {
-
-        String[][] table = new String[this.data.length + 1][this.header.length];
-        for (int row = 0; row < table.length; row++) {
-            for (int column = 0; column < table[0].length; column++) {
-
-                String semicolon = column == table[0].length - 1 ? ";\n" : ";";
-                if (row == 0) {
-                    table[row][column] = this.header[column] + semicolon;
+            for (int i = 0; i < header.length; i++) {
+                writer.append(header[i]);
+                if (i < header.length - 1) {
+                    writer.append(";");
                 } else {
-                    table[row][column] = this.data[row - 1][column] + semicolon;
+                    writer.append("\n");
                 }
             }
-        }
-        return table;
-    }
 
-    public static void readCSV(String path) {
-        BufferedReader reader;
-        String str;
-        String cvsSplitBy = ";";
-        try {
-            reader = new BufferedReader(new FileReader(path));
-            while ((str = reader.readLine()) != null) {
-                // Будем выводить по одной строчке таблицы как String
-                String[] tableRow = str.split(cvsSplitBy);
-                System.out.println(Arrays.toString(tableRow));
+            for (int[] date : data) {
+                for (int j = 0; j < date.length; j++) {
+                    writer.append(String.valueOf(date[j]));
+                    if (j < date.length - 1) {
+                        writer.append(";");
+                    } else {
+                        writer.append("\n");
+                    }
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    public static AppData reads(String fileName) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+
+            String[] header = reader.readLine().split(";");
+
+            int rows = 0;
+            int cols = header.length;
+            while (reader.readLine() != null) {
+                rows++;
+            }
+            reader.close();
+
+            int[][] data = new int[rows][cols];
+            BufferedReader newReader = new BufferedReader(new FileReader(fileName));
+            newReader.readLine();
+            String line;
+            int row = 0;
+            while ((line = newReader.readLine()) != null) {
+                String[] values = line.split(";");
+                for (int i = 0; i < values.length; i++) {
+                    data[row][i] = Integer.parseInt(values[i]);
+                }
+                row++;
+            }
+            return new AppData(header, data);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
 }

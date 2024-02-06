@@ -1,31 +1,38 @@
 package shcool.aston.lesson_6;
 
+
 public class Main {
-    public static void main(String[] args) {
-        String path1 = "file1.csv";
-        String path2 = "file2.csv";
-        String[] header1 = {"Value1", "Value2", "Value3"};
-        int[][] data1 = {
+    public static void main(String[] args)  {
+
+        String[] header = {"Value1", "Value2", "Value3"};
+        int[][] data = {
                 {100, 200, 123},
-                {300, 400, 500}};
-        AppData table1 = new AppData(header1, data1);
+                {300, 400, 500},
+        };
+        AppData appData = new AppData(header, data);
 
-        table1.save(path1);
-        table1.save(path2);
+        appData.save("file1.csv");
 
-        AppData.readCSV(path1);
-        AppData.readCSV(path2);
-        String[] header2 = {"Value1", "Value2", "Value3"};
-        int[][] data2 = {
-                {1, 2, 3},
-                {5, 6, 7}};
-        AppData table2 = new AppData(header2, data2);
-        table2.save(path2);
-        AppData.readCSV(path2);
+        AppData loadedData = AppData.reads("file1.csv");
+        if (loadedData != null) {
+            for (String element : loadedData.header) {
+                System.out.print(element + "  ");
+            }
+            System.out.println();
+            for (int[] row : loadedData.data) {
+                for (int element : row) {
+                    System.out.print(element + "  ");
+                }
+                System.out.println();
+            }
+        }
     }
+}
 
 
 
-    }
+
+
+
 
 
