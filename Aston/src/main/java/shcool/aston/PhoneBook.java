@@ -1,23 +1,30 @@
 package shcool.aston;
-import java.util.ArrayList;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class PhoneBook {
-    private final Map<String, List<String>> contacts = new HashMap<>();
+    private final Map<String, String> phonebook;
 
-    public void add(String name, String phone) {
-        if (contacts.containsKey(name)) {
-            contacts.get(name).add(phone);
-        } else {
-            List<String> phones = new ArrayList<>();
-            phones.add(phone);
-            contacts.put(name, phones);
-        }
+    PhoneBook() {
+        phonebook = new HashMap<>();
     }
 
-    public List<String> get(String name) {
-        return contacts.getOrDefault(name, new ArrayList<>());
+    public void addNumber(String phoneNumber, String lastName) {
+        phonebook.put(phoneNumber, lastName);
+    }
+
+    public void getNumber(String lastName) {
+        if (phonebook.containsValue(lastName)) {
+            Set<Map.Entry<String, String>> set = phonebook.entrySet();
+            for (Map.Entry<String, String> temp : set) {
+                if (temp.getValue().equals(lastName)) {
+                    System.out.println(temp.getValue() + " : " + temp.getKey());
+                }
+            }
+        } else {
+            System.out.println("В справочнике отсутствует фамилия");
+        }
     }
 }
