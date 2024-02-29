@@ -13,8 +13,7 @@ public class FactorialCalculatorTest {
         Assert.assertEquals(FactorialCalculator.calculateFactorial(5), 120);
     }
 
-    @Test(description = "Calculating the factorial of a negative number",
-            expectedExceptions = IllegalArgumentException.class)
+    @Test(description = "Calculating the factorial of a negative number")
     public void testFactorialOfNegativeNumber() {
         IllegalArgumentException thrown = Assertions
                 .assertThrows(IllegalArgumentException.class, () -> FactorialCalculator.calculateFactorial(-5)
