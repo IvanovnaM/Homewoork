@@ -1,31 +1,24 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class FactorialCalculatorTest {
-    @Test
-    public void testCalculateFactorialForZero() {
-        long result = FactorialCalculator.calculateFactorial(0);
-        Assertions.assertEquals(result, 1,
-                String.format("Verifi " + result));
-        System.out.println("Факториал равен " + result);
+    @Test(description = "Calculating the factorial of 0")
+    public void testFactorialOfZero() {
+        Assert.assertEquals(FactorialCalculator.calculateFactorial(0), 1);
     }
 
-    @Test
-    public void testCalculateFactorialForPositiveNumber() {
-        long result = FactorialCalculator.calculateFactorial(5);
-        Assertions.assertEquals(result, 120,
-                String.format("Verifi " + result));
-        System.out.println("Факториал равен " + result);
+    @Test(description = "Calculating the factorial of a positive number")
+    public void testFactorialOfPositiveNumber() {
+        Assert.assertEquals(FactorialCalculator.calculateFactorial(5), 120);
     }
 
-    @Test
-    public void testCalculateFactorialForNegativeNumber() {
+    @Test(description = "Calculating the factorial of a negative number",
+            expectedExceptions = IllegalArgumentException.class)
+    public void testFactorialOfNegativeNumber() {
         IllegalArgumentException thrown = Assertions
-                .assertThrows(IllegalArgumentException.class, () -> {
-                            FactorialCalculator.calculateFactorial(-5);
-                        }
+                .assertThrows(IllegalArgumentException.class, () -> FactorialCalculator.calculateFactorial(-5)
                 );
         Assertions.assertEquals("Число не может быть отрицательным", thrown.getMessage());
-        System.out.println( thrown.getMessage());
     }
 }
