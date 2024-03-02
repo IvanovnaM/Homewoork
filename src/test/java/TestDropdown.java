@@ -8,19 +8,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.Wait;
-
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class TestDropdown  {
     static WebDriver driver;
     private Actions actions;
-    Wait<WebDriver> wait;
+
 
     private Actions getActions() {
         if(actions == null) {
@@ -37,11 +34,11 @@ public class TestDropdown  {
     @BeforeEach
     void setup() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.manage().window().maximize();
         driver.get("https://www.mts.by/");
         driver.findElement(By.id("cookie-agree")).click();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+
     }
 
     @AfterEach
