@@ -1,77 +1,101 @@
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
 
 
-public class MainPage extends BasketPage {
-    public MainPage(WebDriver driver) {
-        super(driver);
+public class MainPage  {
+    private ArrayList<Good> goodList;
+    private static final String URL = "https://www.wildberries.ru/";
+
+    private final WebDriver webDriver;
+
+    public MainPage(WebDriver webDriver) {
+        this.webDriver = webDriver;
+        this.goodList = new ArrayList<>();
     }
 
-    private final String productPrice = ".price__lower-price";
-    private final String productName = ".product-card__name";
-    private final String productBrand = ".product-card__brand";
-    private final String productCartAddBasket = ".product-card__add-basket";
-
-    @FindBy(id = "searchInput")
-    private WebElement searchInput;
-    @FindBy(id = "applySearchBtn")
-    private WebElement buttonSearch;
-    @FindBy(xpath = "//a[@data-wba-header-name='Cart']/span")
-    private WebElement buttonGoToBasket;
-    @FindBy(css = ".product-card")
-    private List<WebElement> allProductCard;
-
-    public void searchForProduct(String productName) {
-        searchInput.sendKeys(productName);
-        buttonSearch.click();
-        this.waitForLoaded();
+    public ArrayList<Good> getGoodList() {
+        return goodList;
     }
 
-    public List<Product> addProductsToCartByIndex(int [] indexes){
-        List<Product> products = new ArrayList<>();
-        for (int index : indexes) {
-            WebElement card = this.getCardByIndex(index);
-            products.add(new Product(this.getProductName(card), this.getProductPrice(card)));
-            this.addToCart(card);
+    // список карточек товаров на главной странице
+    private By goodsList = By.className("product-card__wrapper");
+
+    // Кнопка "В корзину"
+    private By cartButton = By.xpath(".//*[contains(@class, 'product-card__add-basket')]");
+
+    // Таблица размеров карточки (если имеется)
+    private By sizeList = By.xpath("//*[contains(@class, 'sizes-list__button')]");
+
+
+    // Корзина
+    private By headerCartButton = By.xpath(".//*[contains(@class, 'navbar-pc__icon--basket')]");
+
+    // Блок карточки с наименованием товара
+    private By goodName = By.xpath(".//*[@class= 'product-card__name']");
+
+    // Блок карточки с ценой товара
+    private By goodPrice = By.xpath(".//ins[@class= 'price__lower-price']");
+
+    // Открыть главную страницу
+    public void open() {
+        webDriver.get(URL);
+    }
+
+    public MainPage addSomeGoodsToCart(int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            Actions action = new Actions(webDriver);
+            WebElement element = webDriver.findElements(goodsList).get(i);
+            action.moveToElement(element).perform();
+            webDriver.findElements(cartButton).get(i).click();
+            if (!webDriver.findElements(By.className("sizes-list__size")).isEmpty()) {
+                WebElement el = webDriver.findElements(sizeList).get(0);
+                action.moveToElement(el).perform();
+                el.click();
+            }
+            this.goodList.add(new Good(this.getGoodName(i), this.getGoodPrice(i), 1));
         }
-        products.sort(Comparator.comparing(Product::getName));
-        return products;
+        return this;
     }
 
-    public WebElement getCardByIndex(int index) {
-        return allProductCard.get(index);
+    // Кликнуть на иконку Корзины в правом верхнем углу
+
+    public void clickHeaderCartButton() {
+        webDriver.findElement(headerCartButton).click();
     }
 
-    public String getProductName(WebElement card){
-        String brand = card.findElement(By.cssSelector(productBrand)).getText();
-        String name = card.findElement(By.cssSelector(productName))
-                .getText()
-                .replace("/ ", "");
-        if (!Objects.equals(brand, "")) {
-            name = name.replace("Ноутбук", "Ноутбук " + brand);
+    // Получить наименование товара из карточки товара
+    public String getGoodName(int index) {
+        return webDriver.findElements(goodName).get(index).getText().substring(2);
+    }
+
+    // Получить цену товара из карточки товара
+    public int getGoodPrice(int index) {
+        String strPrice = webDriver.findElements(goodPrice).get(index).getText();
+        return Integer.parseInt(strPrice.substring(0, strPrice.length() - 2).replace(" ", ""));
+    }
+
+    // Получить общую сумму товаров
+    public int getGoodsSum() {
+        int totalSum = 0;
+        for (Good good : this.goodList
+        ) {
+            totalSum += good.getPrice();
         }
-        return name;
+        return totalSum;
     }
 
-    public int getProductPrice(WebElement card) {
-        return Integer.parseInt(card.findElement(By.cssSelector(productPrice)).getText()
-                .replaceAll(" ", "")
-                .replace("₽",""));
-    }
-
-    public void addToCart(WebElement card) {
-        getActions().moveToElement(card).perform();
-        card.findElement(By.cssSelector(productCartAddBasket)).click();
-    }
-
-    public CartPage goToCart() {
-        buttonGoToBasket.click();
-        this.waitForLoaded();
-        return new CartPage(driver);
+    // Получить общee количество товаров
+    public int getTotalQuantity() {
+        int totalQuantity = 0;
+        for (Good good : this.goodList
+        ) {
+            totalQuantity += good.getQuantity();
+        }
+        return totalQuantity;
     }
 
 }
