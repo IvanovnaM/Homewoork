@@ -37,17 +37,17 @@ public class AndroidCalculatorTest {
         calculator.btnAdd.click();
         calculator.btn02.click();
         calculator.btnEqual.click();
-        assertEquals("6 Результат вычисления", calculator.edtFormula.getText());
+        assertEquals("6", calculator.edtFormula.getText());
     }
 
     @Test
-    public void subTest() {
+    public void subTest() throws InterruptedException {
         calculator.btnClear.click();
         calculator.btn01.click();
         calculator.btnSub.click();
         calculator.btn02.click();
         calculator.btnEqual.click();
-        assertEquals("2 Результат вычисления", calculator.edtFormula.getText());
+        assertEquals("2", calculator.edtFormula.getText());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class AndroidCalculatorTest {
         calculator.btnMul.click();
         calculator.btn02.click();
         calculator.btnEqual.click();
-        assertEquals("8 Результат вычисления", calculator.edtFormula.getText());
+        assertEquals("8", calculator.edtFormula.getText());
     }
     @Test
     public void divTest() {
@@ -66,7 +66,7 @@ public class AndroidCalculatorTest {
         calculator.btnDiv.click();
         calculator.btn02.click();
         calculator.btnEqual.click();
-        assertEquals("2 Результат вычисления", calculator.edtFormula.getText());
+        assertEquals("2", calculator.edtFormula.getText());
     }
 
     @AfterEach

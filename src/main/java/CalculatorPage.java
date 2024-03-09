@@ -18,11 +18,11 @@ public class CalculatorPage {
     public WebElement btnSub;
     @FindBy (id = "com.google.android.calculator:id/op_mul")
     public WebElement btnMul;
-    @FindBy (id = "com.google.android.calculator:id/op_divv")
+    @FindBy (id = "com.google.android.calculator:id/op_div")
     public WebElement btnDiv;
     @FindBy (id = "com.google.android.calculator:id/eq")
     public WebElement btnEqual;
-    @FindBy (id = "com.google.android.calculator:id/formula")
+    @FindBy (id = "com.google.android.calculator:id/result_final")
     public WebElement edtFormula;
 
     public CalculatorPage(AndroidDriver driver) {
