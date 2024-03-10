@@ -1,11 +1,14 @@
 import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Allure;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,7 +34,11 @@ public class AndroidCalculatorTest {
     }
 
     @Test
+    @DisplayName("Тест суммы")
+
     public void sumTest() {
+        Allure.getLifecycle().updateTestCase(result -> result.setName("Test sumTest"));
+
         calculator.btnClear.click();
         calculator.btn01.click();
         calculator.btnAdd.click();
@@ -41,6 +48,8 @@ public class AndroidCalculatorTest {
     }
 
     @Test
+    @DisplayName("Тест вычитания")
+
     public void subTest() throws InterruptedException {
         calculator.btnClear.click();
         calculator.btn01.click();
@@ -51,6 +60,8 @@ public class AndroidCalculatorTest {
     }
 
     @Test
+    @DisplayName("Тест умножения")
+
     public void mulTest() {
         calculator.btnClear.click();
         calculator.btn01.click();
@@ -60,6 +71,8 @@ public class AndroidCalculatorTest {
         assertEquals("8", calculator.edtFormula.getText());
     }
     @Test
+    @DisplayName("Тест деления")
+
     public void divTest() {
         calculator.btnClear.click();
         calculator.btn01.click();
