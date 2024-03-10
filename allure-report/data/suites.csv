@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Mar 10 23:22:35 MSK 2024","Sun Mar 10 23:22:47 MSK 2024","11587","","AndroidCalculatorTest","","AndroidCalculatorTest","sumTest","Test sumTest",""
+"passed","Sun Mar 10 23:04:01 MSK 2024","Sun Mar 10 23:04:12 MSK 2024","10745","","AndroidCalculatorTest","","AndroidCalculatorTest","divTest","Тест деления",""
+"passed","Sun Mar 10 23:03:28 MSK 2024","Sun Mar 10 23:03:39 MSK 2024","11232","","AndroidCalculatorTest","","AndroidCalculatorTest","subTest","Тест вычитания",""
+"passed","Sun Mar 10 23:03:50 MSK 2024","Sun Mar 10 23:04:01 MSK 2024","11017","","AndroidCalculatorTest","","AndroidCalculatorTest","mulTest","Тест умножения",""
